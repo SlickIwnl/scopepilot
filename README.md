@@ -129,8 +129,12 @@ React inquiry form
   -> workflow service creates request-scoped generation
   -> one Strands Agent / one permitted Bedrock model call
   -> Strands structured-output tool + WorkflowDraftSchema validation
-  -> workflow envelope -> browser Zod validation -> text-only React output
+   -> workflow envelope -> browser Zod validation -> text-only React output
 ```
+
+![ScopePilot architecture diagram](docs/architecture-diagram.png)
+
+The diagram shows the live Bedrock path, the no-credential offline fixture path, the request-scoped Strands Agent boundary, and the evaluation controls.
 
 - `src/shared/contracts.ts`: strict bounded Zod request, catalog, draft, and response contracts.
 - `src/catalog/`: one synthetic consultant profile; currently TypeScript data, not an external database.
